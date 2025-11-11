@@ -1,12 +1,18 @@
 [
   {
+    "id": "1",
     "name": "2021 Mercedes-Benz AMG G63 4.0 SUV",
     "price": "RM 883,000",
-    "image": "car_1.jpg"
+    "image": "car_1.jpg",
+    "images": ["car_1.jpg"],
+    "desc": { "zh": "AMG 手工 V8 · 四驱 · 高性能越野旗舰" }
   },
   {
+    "id": "2",
     "name": "2022 Mercedes-Benz AMG G63 4.0 BRABUS",
     "price": "RM 838,000",
-    "image": "car_2.jpg"
+    "image": "car_2.jpg",
+    "images": ["car_2.jpg"],
+    "desc": { "zh": "BRABUS 套件 · 霸气外观 · 稀有配置" }
   }
 ]
