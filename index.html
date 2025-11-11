@@ -4,54 +4,121 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ONE MOTOR GROUP · Luxury Import Car</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: "Poppins", sans-serif;
+      color: #d4af37;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px 0;
+      border-bottom: 1px solid #d4af37;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: #d4af37;
+    }
+    header p {
+      margin: 3px 0;
+      color: #bfa64a;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .car-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+      gap: 35px;
+    }
+
+    .car-box {
+      width: 90%;
+      max-width: 380px;
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      background: #000;
+      overflow: hidden;
+      box-shadow: 0 0 15px #d4af37;
+      text-align: center;
+      position: relative;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    .car-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s;
+    }
+
+    .car-box:hover img {
+      transform: scale(1.05);
+    }
+
+    .car-title {
+      padding: 15px 0 5px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffdf6b;
+    }
+    .car-price {
+      padding-bottom: 15px;
+      color: #d4af37;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      padding: 20px 0;
+      font-size: 13px;
+      color: #bfa64a;
+    }
+
+    /* 动画 - 上下慢慢流动 */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(10px); }
+    }
+  </style>
 </head>
 <body>
-
-  <header class="topnav">
-    <div class="logo">
-      <img src="logo.svg" alt="ONE MOTOR GROUP logo">
-      <div class="brand">
-        <h1>ONE MOTOR GROUP</h1>
-        <p>LUXURY IMPORT CAR · MALAYSIA</p>
-      </div>
-    </div>
+  <header>
+    <h1>ONE MOTOR GROUP</h1>
+    <p>LUXURY IMPORT CAR · MALAYSIA</p>
   </header>
 
-  <main class="main-grid">
-    <!-- 左侧车格 -->
-    <div class="car-box left">
-      <div class="carousel">
-        <img src="car_1.jpg" alt="Car 1">
-        <img src="car_2.jpg" alt="Car 1">
-        <img src="car_3.jpg" alt="Car 1">
+  <main>
+    <div class="car-container">
+      <div class="car-box">
+        <a href="car.html?id=1">
+          <img src="car_1.jpg" alt="2021 Mercedes-Benz G63 AMG">
+        </a>
+        <div class="car-title">2021 Mercedes-Benz AMG G63 4.0 SUV</div>
+        <div class="car-price">RM 883,000</div>
       </div>
-      <div class="car-info">
-        <h2>2021 Mercedes-Benz G63 AMG</h2>
-        <p>RM 883,000</p>
-      </div>
-      <a href="car.html?id=1" class="overlay"></a>
-    </div>
 
-    <!-- 右侧车格 -->
-    <div class="car-box right">
-      <div class="carousel">
-        <img src="car_4.jpg" alt="Car 2">
-        <img src="car_5.jpg" alt="Car 2">
-        <img src="car_6.jpg" alt="Car 2">
+      <div class="car-box">
+        <a href="car.html?id=2">
+          <img src="car_2.jpg" alt="2022 Mercedes-Benz BRABUS G63">
+        </a>
+        <div class="car-title">2022 Mercedes-Benz AMG G63 4.0 BRABUS</div>
+        <div class="car-price">RM 838,000</div>
       </div>
-      <div class="car-info">
-        <h2>2022 Mercedes-Benz G63 BRABUS</h2>
-        <p>RM 838,000</p>
-      </div>
-      <a href="car.html?id=2" class="overlay"></a>
     </div>
   </main>
 
   <footer>
     © ONE MOTOR GROUP — All Rights Reserved
   </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
