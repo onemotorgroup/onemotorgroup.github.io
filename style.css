@@ -23,20 +23,19 @@ footer {
   color: #bfa84b;
 }
 
-/* 行容器 */
 .row {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
   gap: 20px;
   padding: 20px;
-  animation: scrollRight 60s linear infinite;
-}
-.row.reverse {
-  animation: scrollLeft 60s linear infinite;
+  animation: scrollRight 50s linear infinite;
 }
 
-/* 动画定义 */
+.row.reverse {
+  animation: scrollLeft 50s linear infinite;
+}
+
 @keyframes scrollRight {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0%); }
@@ -46,31 +45,39 @@ footer {
   100% { transform: translateX(-50%); }
 }
 
-/* 车卡片样式 */
 .car-card {
-  min-width: 260px;
+  min-width: 280px;
   background: #000;
   border: 2px solid gold;
   border-radius: 12px;
-  box-shadow: 0 0 25px gold;
+  box-shadow: 0 0 20px gold;
+  overflow: hidden;
   transition: transform 0.3s;
 }
+
 .car-card:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 .car-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+  display: block;
 }
-.car-card h3 {
-  margin: 10px 0 5px;
+
+.info {
+  padding: 10px;
+}
+
+.info h3 {
   font-size: 16px;
+  margin: 5px 0;
 }
-.price {
-  color: #ffde59;
+
+.info p {
+  color: #ffdf59;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0;
 }
