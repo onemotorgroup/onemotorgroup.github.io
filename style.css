@@ -1,204 +1,139 @@
-/* 🟡 顶部固定导航栏样式 */
-.topnav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+body {
+  margin: 0;
   background: #000;
-  border-bottom: 1px solid #d4af37;
-  z-index: 9999;
+  color: #d4af37;
+  font-family: "Poppins", sans-serif;
 }
 
+/* 🟡 顶部导航 */
+.topnav {
+  background: #000;
+  border-bottom: 1px solid #d4af37;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 12px 20px;
 }
-
 .logo-area {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .logo-area img {
   height: 50px;
-  width: auto;
 }
-
 .brand .main {
-  display: block;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 20px;
   color: #d4af37;
 }
-
 .brand .sub {
   font-size: 12px;
   color: #c0a94f;
-  letter-spacing: 1px;
 }
 
-/* 导航语言按钮 */
-.lang-switch button {
-  background: transparent;
-  border: 1px solid #d4af37;
+/* 🟡 菜单导航 */
+.menu a {
+  text-decoration: none;
   color: #d4af37;
-  padding: 6px 10px;
-  margin-left: 6px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.lang-switch button:hover {
-  background-color: #d4af37;
-  color: #000;
-}
-
-/* 让主内容往下移，不被导航盖住 */
-main {
-  padding-top: 110px;
-}/* =============== ONE MOTOR GROUP 黑金主题风格 =============== */
-
-/* 整体背景 */
-body {
-  background-color: #000;          /* 黑色背景 */
-  color: #d4af37;                 /* 金色文字 */
-  font-family: "Helvetica Neue", sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* Header 区域 */
-header {
-  background-color: #000;
-  padding: 20px 0;
-  border-bottom: 2px solid #d4af37;
-}
-
-.logo img {
-  width: 180px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-.brand .main {
-  display: block;
-  font-size: 22px;
+  margin: 0 15px;
   font-weight: bold;
-  color: #d4af37;
+}
+.menu a:hover,
+.menu a.active {
+  color: #ffde59;
 }
 
-.brand .sub {
-  font-size: 14px;
-  color: #c6a84f;
-  letter-spacing: 2px;
+/* 🟡 搜索 + 语言 */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
-/* 语言按钮 */
-.lang-switch {
-  margin: 10px 0 20px;
-}
-
-.lang-switch button {
-  background: transparent;
+#searchInput {
+  padding: 6px 10px;
+  background: #111;
   border: 1px solid #d4af37;
+  border-radius: 5px;
   color: #d4af37;
-  padding: 6px 12px;
-  margin: 0 4px;
+}
+.lang-switch button {
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
   border-radius: 4px;
+  padding: 5px 10px;
   cursor: pointer;
 }
-
 .lang-switch button:hover {
-  background-color: #d4af37;
+  background: #d4af37;
   color: #000;
 }
 
-/* 车卡片区域 */
-#carGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 18px;
-  padding: 20px;
+/* 🟡 主体内容（车格布局） */
+main {
+  padding: 130px 20px 50px;
 }
-
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
 .car-card {
   background: #000;
   border: 1px solid #d4af37;
   border-radius: 12px;
-  padding: 14px;
-  color: #d4af37;
-  transition: all 0.3s ease;
+  padding: 15px;
+  transition: all 0.3s;
 }
-
 .car-card:hover {
   transform: scale(1.02);
   box-shadow: 0 0 15px #d4af37;
 }
-
 .car-card img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
-
-.car-info {
-  margin-top: 10px;
-}
-
 .car-info h3 {
-  margin: 0;
   color: #d4af37;
-  font-size: 18px;
+  margin-top: 8px;
 }
-
 .car-info .price {
-  margin-top: 6px;
-  color: #ffde59;
+  color: #ffdf6b;
   font-weight: bold;
 }
 
-/* 页脚 */
-footer {
-  border-top: 1px solid #d4af37;
-  color: #d4af37;
-  padding: 18px 0;
+/* 🟡 分页 */
+.pagination {
+  text-align: center;
   margin-top: 30px;
-  font-size: 14px;
 }
-
-/* 分页样式（从上次加的保留） */
-#pager {
-  margin: 18px 0 28px;
-}
-.pg-btn {
+.pagination button {
   background: transparent;
   border: 1px solid #d4af37;
   color: #d4af37;
   padding: 6px 10px;
-  margin: 0 4px 8px;
-  border-radius: 6px;
+  border-radius: 5px;
+  margin: 5px;
   cursor: pointer;
 }
-.pg-btn.active,
-.pg-btn:hover {
+.pagination button:hover {
   background: #d4af37;
   color: #000;
 }
-.pg-btn[disabled] {
-  opacity: .35;
-  cursor: not-allowed;
+.pagination button.active {
+  background: #d4af37;
+  color: #000;
 }
-.pg-ellipsis {
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #d4af37;
   color: #d4af37;
-  margin: 0 6px;
 }
-.pg-info {
-  display: inline-block;
-  margin-left: 10px;
-  color: #c0a94f;
-  font-size: 13px;
-  }
