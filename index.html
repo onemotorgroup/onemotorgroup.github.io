@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ONE MOTOR GROUP · 进口车专家 · 值得信赖</title>
+<link rel="stylesheet" href="style.css">
+<meta name="color-scheme" content="dark">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="images/logo.svg" alt="ONE MOTOR GROUP" />
+      <div class="bt">
+        <h1>ONE MOTOR GROUP</h1>
+        <p id="slogan">进口车专家 · 值得信赖</p>
+        <p id="subtitle_ms" class="sub">PAKAR KERETA IMPORT · BOLEH DIPERCAYAI</p>
+      </div>
+    </div>
+    <div class="lang">
+      <button class="pill" data-lang="zh">中</button>
+      <button class="pill" data-lang="en">EN</button>
+      <button class="pill" data-lang="ms">BM</button>
+    </div>
+  </header>
+
+  <!-- 上层流动车展示（向右） -->
+  <section class="marquee">
+    <div class="marquee-track" id="marqueeTop"></div>
+  </section>
+
+  <!-- 搜索 -->
+  <section class="search">
+    <input id="q" placeholder="搜索品牌 / 车型 / 年份…" />
+    <button id="btnSearch" aria-label="Search">🔍</button>
+  </section>
+
+  <!-- 车卡网格 -->
+  <main id="carGrid" class="grid"></main>
+
+  <!-- 横向黄金滚动文案（从右往左） -->
+  <section class="ticker">
+    <div class="ticker-track" id="advTicker"></div>
+    <div class="shine"></div>
+  </section>
+
+  <!-- 巴生港口：图片 + 文案（6 组），可后续替换为你的实拍 -->
+  <section class="port">
+    <article class="pb"><img src="images/port/1.jpg" alt="Port Klang"><div class="txt"></div></article>
+    <article class="pb"><img src="images/port/2.jpg" alt="Port Klang"><div class="txt"></div></article>
+    <article class="pb"><img src="images/port/3.jpg" alt="Port Klang"><div class="txt"></div></article>
+    <article class="pb"><img src="images/port/4.jpg" alt="Port Klang"><div class="txt"></div></article>
+    <article class="pb"><img src="images/port/5.jpg" alt="Port Klang"><div class="txt"></div></article>
+    <article class="pb"><img src="images/port/6.jpg" alt="Port Klang"><div class="txt"></div></article>
+  </section>
+
+  <!-- 下层流动车展示（向左） -->
+  <section class="marquee reverse">
+    <div class="marquee-track" id="marqueeBottom"></div>
+  </section>
+
+  <footer class="footer">
+    <p>© ONE MOTOR GROUP · <span data-i18n="footer_note">进口车展示平台（不含下单按钮）</span></p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

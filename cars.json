@@ -1,0 +1,39 @@
+{
+  "cars": [
+    {
+      "id": "alphard-2021-black",
+      "brand": "Toyota",
+      "model": "Alphard",
+      "name": "Toyota Alphard 2.5 (A) Executive Lounge",
+      "year": 2021,
+      "mileage": "15,000 km",
+      "color": "Black",
+      "price": "RM 385,000",
+      "highlights": "Executive Lounge、双天窗、电动中扶手、JBL 音响",
+      "value": "高保值、舒适度标杆、家庭与商务皆宜",
+      "story": "日本高配版本，里数低、内外新净。",
+      "images": [
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "rx350l-2020-white",
+      "brand": "Lexus",
+      "model": "RX 350L",
+      "name": "Lexus RX 350L 3.5 (A) 7‑Seater",
+      "year": 2020,
+      "mileage": "20,000 km",
+      "color": "White",
+      "price": "RM 310,000",
+      "highlights": "7 座、大天窗、Mark Levinson",
+      "value": "豪华舒适，二排乘坐极佳",
+      "story": "保养完整，真皮内饰如新。",
+      "images": [
+        "https://images.unsplash.com/photo-1542367597-8849ebae62d8?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop"
+      ]
+    }
+  ]
+}
