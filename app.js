@@ -1,4 +1,4 @@
-// app.js （适用于根目录结构）
+// app.js — ONE MOTOR GROUP 黑金展示专用版
 const DATA_URL = "cars.json";
 
 async function loadCars() {
@@ -14,14 +14,16 @@ async function loadCars() {
       div.className = "car-card";
       div.innerHTML = `
         <img src="${car.image}" alt="${car.name}">
-        <h3>${car.name}</h3>
-        <p>${car.price}</p>
+        <div class="car-info">
+          <h3>${car.name}</h3>
+          <p class="price">${car.price}</p>
+        </div>
       `;
       carGrid.appendChild(div);
     });
   } catch (error) {
-    const carGrid = document.getElementById("carGrid");
-    carGrid.innerHTML = `<p>暂时无车辆数据（请检查 cars.json 是否已上传）</p>`;
+    document.getElementById("carGrid").innerHTML =
+      `<p>⚠️ 暂无车辆数据（请确认 cars.json 已上传）</p>`;
   }
 }
 
