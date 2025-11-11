@@ -1,124 +1,96 @@
-/* ONE MOTOR GROUP Black-Gold Luxury Style */
+/* 黑金主题豪华展示样式 — ONE MOTOR GROUP */
 
 body {
   background-color: #000;
   color: #d4af37;
-  font-family: "Poppins", "Noto Sans SC", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
-  padding: 0;
   text-align: center;
 }
 
-/* Header */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 10px;
-  border-bottom: 1px solid #222;
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
 }
+
 .logo img {
-  height: 60px;
+  width: 80px;
   margin-bottom: 10px;
 }
+
 .brand .main {
+  display: block;
   font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-weight: bold;
   color: #d4af37;
 }
+
 .brand .sub {
   font-size: 14px;
-  color: #888;
+  letter-spacing: 1px;
+  color: #c0a94f;
 }
 
-/* Language switch */
-.language {
-  margin-top: 10px;
-}
 .language button {
-  background: none;
-  color: #d4af37;
+  background: transparent;
   border: 1px solid #d4af37;
-  margin: 0 5px;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 4px;
+  color: #d4af37;
+  margin: 8px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 .language button:hover {
-  background: #d4af37;
+  background-color: #d4af37;
   color: #000;
 }
 
-/* Car grid on homepage */
-.content {
-  padding: 30px 20px;
-}
 .car-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
 }
+
 .car-card {
   background-color: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(212,175,55,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .car-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(212,175,55,0.3);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #d4af37;
 }
+
 .car-card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
-.car-card h3 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-  color: #ffd700;
+
+.car-info {
+  padding: 15px;
 }
-.car-card p {
-  font-size: 14px;
-  color: #bbb;
-  margin-bottom: 10px;
+
+.car-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #f5e2a7;
 }
-.car-card a {
-  text-decoration: none;
-  display: inline-block;
+
+.car-info .price {
+  font-size: 15px;
   color: #d4af37;
-  border: 1px solid #d4af37;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: 0.3s;
-  margin-bottom: 15px;
-}
-.car-card a:hover {
-  background: #d4af37;
-  color: #000;
+  font-weight: bold;
 }
 
-/* Footer */
 footer {
-  padding: 20px 0;
+  border-top: 1px solid #333;
+  padding: 15px;
   font-size: 13px;
-  color: #777;
-  border-top: 1px solid #222;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .brand .main {
-    font-size: 22px;
-  }
-  .car-card img {
-    height: 160px;
-  }
+  color: #c7b065;
 }
