@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vehicle · ONE MOTOR GROUP</title>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<style>
+.gallery{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+@media(min-width:720px){.gallery{grid-template-columns:1fr 1fr}}
+.badge{display:inline-block;border:1px solid var(--gold);padding:4px 8px;border-radius:999px;font-weight:900;margin-right:8px;color:var(--gold)}
+.back{display:inline-flex;gap:8px;align-items:center;margin-bottom:12px}
+.section{background:linear-gradient(180deg,#121212,#0e0e0e);border:1px solid rgba(212,175,55,.2);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+h1{font-size:28px;margin:6px 0 6px;font-weight:900}
+h2{font-size:18px;margin:10px 0 6px;font-weight:900;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <a href="index.html" class="back">← <span data-i18n="back">Back</span></a>
+    <img src="assets/img/logo.svg" alt="ONE MOTOR GROUP logo"/>
+    <div class="brand">
+      <span class="main">ONE MOTOR GROUP</span>
+      <span class="sub" data-i18n="tagline">LUXURY IMPORT CAR · MALAYSIA</span>
+    </div>
+  </div>
+  <nav class="lang-switch">
+    <button class="lang-btn" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ms">BM</button>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="section">
+    <div class="title" id="carTitle">—</div>
+    <div class="price" id="carPrice">—</div>
+    <div class="meta" id="carMeta">—</div>
+  </div>
+
+  <div class="section">
+    <h2 data-i18n="gallery">Photo Gallery</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="section">
+    <h2 data-i18n="highlights">Highlights</h2>
+    <ul id="highlights"></ul>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>© ONE MOTOR GROUP — All Rights Reserved</span>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const id = Number(params.get('id'))||1;
+  loadCarDetail(id);
+</script>
+</body>
+</html>
