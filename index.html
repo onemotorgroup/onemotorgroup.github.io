@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ONE MOTOR GROUP · Luxury Import Car</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="logo.svg" alt="ONE MOTOR GROUP logo">
-    </div>
-    <div class="brand">
-      <span class="main">ONE MOTOR GROUP</span>
-      <span class="sub">LUXURY IMPORT CAR · MALAYSIA</span>
+
+  <!-- 🟡 固定导航栏 -->
+  <header class="topnav">
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="logo.svg" alt="ONE MOTOR GROUP logo">
+        <div class="brand">
+          <span class="main">ONE MOTOR GROUP</span>
+          <span class="sub">LUXURY IMPORT CAR · MALAYSIA</span>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <button>中文</button>
+        <button>EN</button>
+        <button>BM</button>
+      </div>
     </div>
   </header>
 
-  <nav class="language">
-    <button>中文</button>
-    <button>EN</button>
-    <button>BM</button>
-  </nav>
-
-  <main class="content">
-    <section class="car-grid" id="carGrid"></section>
+  <!-- 🟡 主内容区 -->
+  <main>
+    <div id="carGrid" class="car-grid"></div>
     <div id="pager"></div>
   </main>
 
+  <!-- 🟡 页脚 -->
   <footer>
-    <p>© ONE MOTOR GROUP — All Rights Reserved</p>
+    © ONE MOTOR GROUP — All Rights Reserved
   </footer>
 
-  <!-- 直接加载同目录下的文件 -->
   <script src="app.js"></script>
 </body>
 </html>
