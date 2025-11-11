@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Bebas+Neue&family=Noto+Sans+SC:wght@700;900&display=swap');
+
+:root{
+  --bg:#0b0b0b;
+  --panel:#111;
+  --gold:#d4af37;
+  --gold-soft:#c9a227;
+  --muted:#b2942b;
+  --card:#121212;
+  --radius:18px;
+  --shadow:0 6px 22px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--gold);font-family:"Montserrat","Noto Sans SC",system-ui,-apple-system,Arial;}
+
+a{color:var(--gold);text-decoration:none}
+img{max-width:100%;display:block;border-radius:14px}
+
+.header{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(212,175,55,.25);
+  position:sticky;top:0;background:linear-gradient(180deg,#0b0b0b 0%,rgba(11,11,11,.8) 100%);z-index:20;
+}
+
+.header .logo{display:flex;align-items:center;gap:12px}
+.header img{height:44px}
+.brand{font-weight:900;letter-spacing:.5px}
+.brand .main{font-size:20px;display:block;line-height:1}
+.brand .sub{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:1.5px}
+
+.lang-switch{margin-left:auto;display:flex;gap:8px}
+.lang-btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:8px 10px;border-radius:999px;font-weight:800;cursor:pointer}
+.lang-btn.active{background:var(--gold);color:#000}
+
+.container{max-width:1200px;margin:0 auto;padding:14px;}
+
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.grid{grid-template-columns:1fr 1fr 1fr}}
+
+.card{
+  background:linear-gradient(180deg,#121212,#0e0e0e);
+  border:1px solid rgba(212,175,55,.2);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.card:hover{transform:translateY(-2px);border-color:var(--gold-soft);box-shadow:0 12px 28px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.06)}
+
+.card-body{padding:12px 14px 16px}
+.price{font-family:"Bebas Neue","Montserrat";font-size:34px;letter-spacing:.5px;margin:8px 0 6px}
+.title{font-weight:900;font-size:18px;line-height:1.25}
+.meta{color:var(--muted);font-weight:800;font-size:12px;letter-spacing:.6px;margin-top:6px}
+
+.footer{
+  display:flex;align-items:center;justify-content:center;gap:12px;padding:24px 12px;border-top:1px solid rgba(212,175,55,.25);
+  color:var(--muted);font-weight:800;letter-spacing:.6px
+}
+
+.pagination{display:flex;gap:8px;justify-content:center;align-items:center;margin:20px 0}
+.page-btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:8px 12px;border-radius:12px;font-weight:800;cursor:pointer}
+.page-btn.active{background:var(--gold);color:#000}
+.page-btn[disabled]{opacity:.35;cursor:not-allowed}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 660 240">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8e6a2"/>
+      <stop offset="1" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="12">
+    <path d="M40,40 L620,40 L620,120 C620,190 480,210 330,210 C180,210 40,190 40,120 Z"/>
+  </g>
+  <text x="330" y="110" font-family="Montserrat, Arial, sans-serif" font-size="72" font-weight="800" fill="url(#g)" text-anchor="middle">ONE MOTOR</text>
+  <text x="330" y="170" font-family="Montserrat, Arial, sans-serif" font-size="60" font-weight="800" fill="url(#g)" text-anchor="middle">GROUP</text>
+</svg>

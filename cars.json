@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "name": "2022 Mercedes‑Benz AMG G63 4.0 SUV",
+    "price": 888000,
+    "location": "Selangor",
+    "mileage": "10‑15K KM",
+    "year": "2022",
+    "images": [
+      "assets/img/car_1.jpg",
+      "assets/img/car_1.jpg",
+      "assets/img/car_1.jpg",
+      "assets/img/car_1.jpg",
+      "assets/img/car_1.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "2021 Mercedes‑Benz AMG G63 4.0 BRABUS",
+    "price": 838000,
+    "location": "Kuala Lumpur",
+    "mileage": "20‑25K KM",
+    "year": "2021",
+    "images": [
+      "assets/img/car_2.jpg",
+      "assets/img/car_2.jpg",
+      "assets/img/car_2.jpg",
+      "assets/img/car_2.jpg",
+      "assets/img/car_2.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "2020 Mercedes‑Benz G‑Class G350d",
+    "price": 698000,
+    "location": "Kuala Lumpur",
+    "mileage": "45‑60K KM",
+    "year": "2020",
+    "images": [
+      "assets/img/car_3.jpg",
+      "assets/img/car_3.jpg",
+      "assets/img/car_3.jpg",
+      "assets/img/car_3.jpg",
+      "assets/img/car_3.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "2020 Mercedes‑Benz G‑Class G400d",
+    "price": 918000,
+    "location": "Selangor",
+    "mileage": "35‑45K KM",
+    "year": "2020",
+    "images": [
+      "assets/img/car_4.jpg",
+      "assets/img/car_4.jpg",
+      "assets/img/car_4.jpg",
+      "assets/img/car_4.jpg",
+      "assets/img/car_4.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "2019 Mercedes‑Benz AMG G63 4.0",
+    "price": 830000,
+    "location": "Kuala Lumpur",
+    "mileage": "60‑80K KM",
+    "year": "2019",
+    "images": [
+      "assets/img/car_5.jpg",
+      "assets/img/car_5.jpg",
+      "assets/img/car_5.jpg",
+      "assets/img/car_5.jpg",
+      "assets/img/car_5.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "2023 Mercedes‑Benz AMG G63 4.0 Night Pkg",
+    "price": 1080000,
+    "location": "Selangor",
+    "mileage": "5‑10K KM",
+    "year": "2023",
+    "images": [
+      "assets/img/car_6.jpg",
+      "assets/img/car_6.jpg",
+      "assets/img/car_6.jpg",
+      "assets/img/car_6.jpg",
+      "assets/img/car_6.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "2021 Mercedes‑Benz G‑Class G350d AMG Line",
+    "price": 748000,
+    "location": "Kuala Lumpur",
+    "mileage": "30‑40K KM",
+    "year": "2021",
+    "images": [
+      "assets/img/car_7.jpg",
+      "assets/img/car_7.jpg",
+      "assets/img/car_7.jpg",
+      "assets/img/car_7.jpg",
+      "assets/img/car_7.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "2022 Mercedes‑Benz AMG G63 4.0 Edition",
+    "price": 955000,
+    "location": "Selangor",
+    "mileage": "15‑20K KM",
+    "year": "2022",
+    "images": [
+      "assets/img/car_8.jpg",
+      "assets/img/car_8.jpg",
+      "assets/img/car_8.jpg",
+      "assets/img/car_8.jpg",
+      "assets/img/car_8.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "2022 Mercedes‑Benz AMG G63 4.0 SUV",
+    "price": 888000,
+    "location": "Selangor",
+    "mileage": "10‑15K KM",
+    "year": "2022",
+    "images": [
+      "assets/img/car_9.jpg",
+      "assets/img/car_9.jpg",
+      "assets/img/car_9.jpg",
+      "assets/img/car_9.jpg",
+      "assets/img/car_9.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "2021 Mercedes‑Benz AMG G63 4.0 BRABUS",
+    "price": 838000,
+    "location": "Kuala Lumpur",
+    "mileage": "20‑25K KM",
+    "year": "2021",
+    "images": [
+      "assets/img/car_10.jpg",
+      "assets/img/car_10.jpg",
+      "assets/img/car_10.jpg",
+      "assets/img/car_10.jpg",
+      "assets/img/car_10.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "2020 Mercedes‑Benz G‑Class G350d",
+    "price": 698000,
+    "location": "Kuala Lumpur",
+    "mileage": "45‑60K KM",
+    "year": "2020",
+    "images": [
+      "assets/img/car_11.jpg",
+      "assets/img/car_11.jpg",
+      "assets/img/car_11.jpg",
+      "assets/img/car_11.jpg",
+      "assets/img/car_11.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "2020 Mercedes‑Benz G‑Class G400d",
+    "price": 918000,
+    "location": "Selangor",
+    "mileage": "35‑45K KM",
+    "year": "2020",
+    "images": [
+      "assets/img/car_12.jpg",
+      "assets/img/car_12.jpg",
+      "assets/img/car_12.jpg",
+      "assets/img/car_12.jpg",
+      "assets/img/car_12.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "2019 Mercedes‑Benz AMG G63 4.0",
+    "price": 830000,
+    "location": "Kuala Lumpur",
+    "mileage": "60‑80K KM",
+    "year": "2019",
+    "images": [
+      "assets/img/car_13.jpg",
+      "assets/img/car_13.jpg",
+      "assets/img/car_13.jpg",
+      "assets/img/car_13.jpg",
+      "assets/img/car_13.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "2023 Mercedes‑Benz AMG G63 4.0 Night Pkg",
+    "price": 1080000,
+    "location": "Selangor",
+    "mileage": "5‑10K KM",
+    "year": "2023",
+    "images": [
+      "assets/img/car_14.jpg",
+      "assets/img/car_14.jpg",
+      "assets/img/car_14.jpg",
+      "assets/img/car_14.jpg",
+      "assets/img/car_14.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "2021 Mercedes‑Benz G‑Class G350d AMG Line",
+    "price": 748000,
+    "location": "Kuala Lumpur",
+    "mileage": "30‑40K KM",
+    "year": "2021",
+    "images": [
+      "assets/img/car_15.jpg",
+      "assets/img/car_15.jpg",
+      "assets/img/car_15.jpg",
+      "assets/img/car_15.jpg",
+      "assets/img/car_15.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "2022 Mercedes‑Benz AMG G63 4.0 Edition",
+    "price": 955000,
+    "location": "Selangor",
+    "mileage": "15‑20K KM",
+    "year": "2022",
+    "images": [
+      "assets/img/car_16.jpg",
+      "assets/img/car_16.jpg",
+      "assets/img/car_16.jpg",
+      "assets/img/car_16.jpg",
+      "assets/img/car_16.jpg"
+    ],
+    "highlights": [
+      "Japan Import · Premium Spec",
+      "Genuine low mileage",
+      "Tip‑top condition",
+      "Recon car · Dealer stock"
+    ]
+  }
+]
