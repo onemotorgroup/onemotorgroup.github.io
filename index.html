@@ -1,85 +1,47 @@
-<!-- index.html 主页：黑金 · 双行自动流动 · 可点击进详情 · 语言切换 · 搜索 -->
+<!-- car.html 详情页：读取 cars.json?id=xx · 图集切换 · 返回按钮 -->
 <!doctype html>
 <html lang="zh">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ONE MOTOR GROUP · Luxury Import Car · Malaysia</title>
+  <title>ONE MOTOR GROUP · Car Detail</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* 防止 CSS 没加载时白屏抖动的小保护 */
-    body{visibility:visible}
+    .detail{max-width:960px;margin:0 auto;padding:18px}
+    .back{display:inline-block;margin:10px 0 14px 0;padding:10px 12px;border:1px solid #735a13;border-radius:10px;background:#0b0a08;color:#e7d28b;font-weight:900}
+    .gallery{position:relative;border-radius:16px;overflow:hidden;border:1px solid #6c5212}
+    .gallery .big{width:100%;height:52vh;min-height:260px;background:#000 center/cover no-repeat}
+    .thumbs{display:flex;gap:8px;overflow:auto;padding:8px;margin-top:8px}
+    .thumbs img{height:64px;border-radius:10px;border:1px solid #6c5212;opacity:.85}
+    .thumbs img.active{opacity:1;box-shadow:0 0 0 2px #d4af37}
+    .infoBox{margin-top:14px;padding:14px;border:1px solid #6c5212;border-radius:14px;background:#0a0a0a}
+    .infoBox h1{margin:0 0 8px 0;font-size:22px;font-weight:900}
+    .infoBox .price{font-size:20px;font-weight:900;color:#ffdf85;margin-bottom:8px}
+    .desc{opacity:.95;line-height:1.6;font-weight:700}
   </style>
 </head>
 <body>
-  <!-- 顶部 LOGO + 品牌字样 + 语言 -->
-  <header class="topbar">
-    <div class="brand">
-      <img src="logo.svg" alt="ONE MOTOR GROUP logo" class="logo"/>
-      <div class="brand-text">
-        <div class="title">ONE MOTOR GROUP</div>
-        <div class="subtitle" data-i18n="tagline">LUXURY • IMPORT CAR • MALAYSIA</div>
-      </div>
+  <div class="detail">
+    <a class="back" href="index.html">← 返回 Back</a>
+    <div class="gallery">
+      <div id="big" class="big"></div>
+      <div id="thumbs" class="thumbs"></div>
     </div>
-    <div class="actions">
-      <input id="search" class="search" placeholder="🔎 搜索车型 / 价格 / 关键字" />
-      <div class="lang">
-        <button data-lang="zh" class="active">中文</button>
-        <button data-lang="en">EN</button>
-        <button data-lang="bm">BM</button>
-      </div>
+    <div class="infoBox">
+      <h1 id="name">Car</h1>
+      <div id="price" class="price"></div>
+      <div id="desc" class="desc"></div>
     </div>
-  </header>
-
-  <!-- 双行自动流动 -->
-  <main class="showcase">
-    <!-- 第一排：向右 -->
-    <section class="row" data-direction="right">
-      <div class="track"></div>
-      <div class="track clone"></div>
-    </section>
-    <!-- 第二排：向左 -->
-    <section class="row" data-direction="left">
-      <div class="track"></div>
-      <div class="track clone"></div>
-    </section>
-  </main>
-
-  <footer class="footer">© ONE MOTOR GROUP — All Rights Reserved</footer>
+  </div>
 
   <script>
-    // ===== 语言（只切换固定 UI 文案；车型名按数据原文显示）=====
-    const i18n = {
-      zh:{ tagline:"LUXURY · IMPORT CAR · MALAYSIA", search:"🔎 搜索车型 / 价格 / 关键字", price:"价格"},
-      en:{ tagline:"LUXURY · IMPORT CAR · MALAYSIA", search:"🔎 Search model / price / keyword", price:"Price"},
-      bm:{ tagline:"LUXURY · IMPORT CAR · MALAYSIA", search:"🔎 Cari model / harga / kata kunci", price:"Harga"}
-    };
-    const langBtns = document.querySelectorAll('.lang button');
-    function setLang(l){
-      document.querySelector('[data-i18n="tagline"]').textContent = i18n[l].tagline;
-      const s = document.getElementById('search');
-      s.placeholder = i18n[l].search;
-      langBtns.forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
-      localStorage.setItem('omg_lang', l);
-    }
-    langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
-    setLang(localStorage.getItem('omg_lang') || 'zh');
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
 
-    // ===== 拉数据 + 生成卡片 =====
-    const ROW_CARD_COUNT = 8;           // 每排显示卡片数量（视觉上会循环）
-    const BASE_SPEED = 40;              // 滚动速度（越大越慢）
-    let CARS = [];
-
-    async function loadData(){
-      try{
-        const r = await fetch('cars.json?cachebust=' + Date.now());
-        CARS = await r.json();
-      }catch(e){
-        // 兼容你只填了 name/price/image 的简表
-        CARS = [];
-      }
-      // 给每辆车补全 id / images
-      CARS = CARS.map((c, i)=>({
+    (async ()=>{
+      const r = await fetch('cars.json?cb=' + Date.now());
+      let list = await r.json();
+      list = list.map((c,i)=>({
         id: c.id || String(i+1),
         name: c.name || ('Vehicle #' + (i+1)),
         price: c.price || '',
@@ -87,59 +49,29 @@
         image: c.image || (c.images && c.images[0]) || '',
         desc: c.desc || {}
       }));
-      if(CARS.length === 0){
-        document.querySelector('.showcase').innerHTML =
-          '<p class="empty">暂无车辆数据（请上传 cars.json 与图片）</p>';
-        return;
+      const car = list.find(x=>x.id===id) || list[0];
+
+      document.getElementById('name').textContent = car.name;
+      document.getElementById('price').textContent = car.price;
+      const desc = (car.desc && (car.desc.zh || car.desc.en || car.desc.bm)) || '';
+      document.getElementById('desc').textContent = desc;
+
+      const images = car.images.length ? car.images : (car.image ? [car.image] : []);
+      const big = document.getElementById('big');
+      const thumbs = document.getElementById('thumbs');
+
+      function show(idx){
+        big.style.backgroundImage = 'url("'+ images[idx] +'")';
+        [...thumbs.children].forEach((img,i)=>img.classList.toggle('active', i===idx));
       }
-      buildRows();
-    }
-
-    function buildRows(){
-      const rows = document.querySelectorAll('.row');
-      rows.forEach((row, rowIdx)=>{
-        const track = row.querySelector('.track');
-        const clone = row.querySelector('.track.clone');
-        track.innerHTML = '';
-        // 生成卡片（按索引奇偶分配到两排：上排奇数，下排偶数）
-        const list = CARS.filter((_,i)=> (rowIdx===0 ? i%2===0 : i%2===1));
-        // 为了“无缝循环”，把它重复到足够长
-        const needed = Math.max(ROW_CARD_COUNT, list.length);
-        const repeatList = [];
-        while(repeatList.length < needed*2){ repeatList.push(...list); }
-        repeatList.slice(0, needed*2).forEach(car=>{
-          track.appendChild(makeCard(car));
-        });
-        // 克隆一份用于无缝衔接
-        clone.innerHTML = track.innerHTML;
-
-        // 根据内容宽度设置动画时长（越长走得越久）
-        setTimeout(()=>{
-          const contentWidth = track.scrollWidth;
-          const duration = Math.max(15, contentWidth / BASE_SPEED);
-          track.style.setProperty('--duration', duration + 's');
-          clone.style.setProperty('--duration', duration + 's');
-          // 开始动
-          row.classList.add('play');
-        }, 0);
+      images.forEach((src,i)=>{
+        const t = new Image();
+        t.src = src; t.alt = 'photo';
+        t.addEventListener('click', ()=>show(i));
+        thumbs.appendChild(t);
       });
-    }
-
-    function makeCard(car){
-      const a = document.createElement('a');
-      a.className = 'card';
-      a.href = 'car.html?id=' + encodeURIComponent(car.id);
-      a.innerHTML = `
-        <div class="thumb" style="background-image:url('${sanitize(car.image)}')">
-          <div class="shine"></div>
-        </div>
-        <div class="info">
-          <h3 class="name">${escapeHtml(car.name)}</h3>
-          <div class="price">${escapeHtml(car.price)}</div>
-        </div>
-      `;
-      return a;
-    }
-
-    // 搜索（在当前两排里过滤，再重建）
-    const search = 
+      show(0);
+    })();
+  </script>
+</body>
+</html>
