@@ -1,96 +1,32 @@
-/* 黑金主题豪华展示样式 — ONE MOTOR GROUP */
-
-body {
-  background-color: #000;
-  color: #d4af37;
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  text-align: center;
+/* Pagination */
+#pager {
+  margin: 18px 0 28px;
 }
-
-header {
-  padding: 20px 0;
-  border-bottom: 1px solid #444;
-}
-
-.logo img {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-.brand .main {
-  display: block;
-  font-size: 28px;
-  font-weight: bold;
-  color: #d4af37;
-}
-
-.brand .sub {
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #c0a94f;
-}
-
-.language button {
+.pg-btn {
   background: transparent;
   border: 1px solid #d4af37;
   color: #d4af37;
-  margin: 8px;
-  padding: 6px 14px;
+  padding: 6px 10px;
+  margin: 0 4px 8px;
   border-radius: 6px;
-  font-weight: bold;
   cursor: pointer;
 }
-.language button:hover {
-  background-color: #d4af37;
+.pg-btn.active,
+.pg-btn:hover {
+  background: #d4af37;
   color: #000;
 }
-
-.car-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 30px;
+.pg-btn[disabled] {
+  opacity: .35;
+  cursor: not-allowed;
 }
-
-.car-card {
-  background-color: #111;
-  border: 1px solid #d4af37;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.car-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #d4af37;
-}
-
-.car-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.car-info {
-  padding: 15px;
-}
-
-.car-info h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: #f5e2a7;
-}
-
-.car-info .price {
-  font-size: 15px;
+.pg-ellipsis {
   color: #d4af37;
-  font-weight: bold;
+  margin: 0 6px;
 }
-
-footer {
-  border-top: 1px solid #333;
-  padding: 15px;
+.pg-info {
+  display: inline-block;
+  margin-left: 10px;
+  color: #c0a94f;
   font-size: 13px;
-  color: #c7b065;
 }
