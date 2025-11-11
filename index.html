@@ -8,41 +8,46 @@
 </head>
 <body>
 
-  <!-- 🟡 顶部导航 -->
   <header class="topnav">
-    <div class="nav-container">
-      <div class="logo-area">
-        <img src="logo.svg" alt="ONE MOTOR GROUP logo">
-        <div class="brand">
-          <span class="main">ONE MOTOR GROUP</span>
-          <span class="sub">LUXURY IMPORT CAR · MALAYSIA</span>
-        </div>
-      </div>
-
-      <nav class="menu">
-        <a href="#" class="active">🏠 HOME</a>
-        <a href="#">🚘 GALLERY</a>
-        <a href="#">📞 CONTACT</a>
-      </nav>
-
-      <div class="right-side">
-        <input type="text" id="searchInput" placeholder="🔍 Search car name...">
-        <div class="lang-switch">
-          <button>中文</button>
-          <button>EN</button>
-          <button>BM</button>
-        </div>
+    <div class="logo">
+      <img src="logo.svg" alt="ONE MOTOR GROUP logo">
+      <div class="brand">
+        <h1>ONE MOTOR GROUP</h1>
+        <p>LUXURY IMPORT CAR · MALAYSIA</p>
       </div>
     </div>
   </header>
 
-  <!-- 🟡 主体内容 -->
-  <main>
-    <section id="carGrid" class="car-grid"></section>
-    <div id="pager" class="pagination"></div>
+  <main class="main-grid">
+    <!-- 左侧车格 -->
+    <div class="car-box left">
+      <div class="carousel">
+        <img src="car_1.jpg" alt="Car 1">
+        <img src="car_2.jpg" alt="Car 1">
+        <img src="car_3.jpg" alt="Car 1">
+      </div>
+      <div class="car-info">
+        <h2>2021 Mercedes-Benz G63 AMG</h2>
+        <p>RM 883,000</p>
+      </div>
+      <a href="car.html?id=1" class="overlay"></a>
+    </div>
+
+    <!-- 右侧车格 -->
+    <div class="car-box right">
+      <div class="carousel">
+        <img src="car_4.jpg" alt="Car 2">
+        <img src="car_5.jpg" alt="Car 2">
+        <img src="car_6.jpg" alt="Car 2">
+      </div>
+      <div class="car-info">
+        <h2>2022 Mercedes-Benz G63 BRABUS</h2>
+        <p>RM 838,000</p>
+      </div>
+      <a href="car.html?id=2" class="overlay"></a>
+    </div>
   </main>
 
-  <!-- 🟡 页脚 -->
   <footer>
     © ONE MOTOR GROUP — All Rights Reserved
   </footer>
