@@ -1,117 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONE MOTOR GROUP · Car Details</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-    body {
-      background-color: #000;
-      color: #d4af37;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    .header {
-      padding: 20px 0;
-      border-bottom: 1px solid #333;
-    }
-    .header img {
-      height: 50px;
-    }
-    .car-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-    .car-gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(212,175,55,0.3);
-    }
-    .car-info {
-      padding: 20px;
-      line-height: 1.8;
-      text-align: left;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #d4af37;
-    }
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffd700;
-      margin-top: 10px;
-    }
-    .back-btn {
-      display: inline-block;
-      margin: 30px 0;
-      padding: 12px 25px;
-      border: 2px solid #d4af37;
-      color: #d4af37;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .back-btn:hover {
-      background: #d4af37;
-      color: black;
-    }
-    footer {
-      padding: 20px 0;
-      border-top: 1px solid #333;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Details - ONE MOTOR GROUP</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="header">
-    <img src="/assets/img/logo.svg" alt="ONE MOTOR GROUP logo">
-    <h1>ONE MOTOR GROUP · IMPORT CAR DETAILS</h1>
+
+  <header class="topnav">
+    <h1>ONE MOTOR GROUP</h1>
+    <p>Car Detail Information</p>
   </header>
 
-  <div class="car-gallery">
-    <img src="/assets/img/car_1.jpg" alt="Car photo 1">
-    <img src="/assets/img/car_2.jpg" alt="Car photo 2">
-    <img src="/assets/img/car_3.jpg" alt="Car photo 3">
-    <img src="/assets/img/car_4.jpg" alt="Car photo 4">
-    <img src="/assets/img/car_5.jpg" alt="Car photo 5">
-  </div>
+  <main class="detail">
+    <div class="photo-gallery">
+      <img src="car_1.jpg">
+      <img src="car_2.jpg">
+      <img src="car_3.jpg">
+      <img src="car_4.jpg">
+      <img src="car_5.jpg">
+    </div>
 
-  <div class="car-info">
-    <h1>2020 Toyota Alphard 2.5 (A) Z</h1>
-    <p class="price">RM 100,000 🔥</p>
-    <p>颜色：白色<br>里数：8,000 km<br>进口：日本 Japan Import</p>
-    <p>⭐ 6-Star Premium Luxury MPV ⭐</p>
-
-    <h2>🌟 亮点 Highlights</h2>
-    <ul>
-      <li>Executive Luxury Interior with Captain Seats</li>
-      <li>Power Sliding Doors & Rear Sunshade</li>
-      <li>Full LED Headlamps · Original JBL Sound System</li>
-      <li>New Arrival · Premium Recond Condition</li>
-    </ul>
-
-    <h2>📖 故事 / Story</h2>
-    <p>Every journey deserves comfort and elegance — and this Alphard brings both. Designed for those who appreciate quiet power, refined luxury, and a commanding presence on Malaysian roads.</p>
-  </div>
-
-  <a href="/index.html" class="back-btn">← 返回首页 / Back to Home</a>
+    <div class="details">
+      <h2>2021 Mercedes-Benz G63 AMG</h2>
+      <p><b>Price:</b> RM 883,000</p>
+      <p><b>Features:</b> Full BRABUS Package · Panoramic Roof · AMG Interior · 0 Accident</p>
+      <p><b>Story:</b> Direct import from Japan, fully maintained, showroom condition.</p>
+    </div>
+  </main>
 
   <footer>
     © ONE MOTOR GROUP — All Rights Reserved
   </footer>
 
-  <script src="/assets/js/app.js"></script>
 </body>
 </html>
