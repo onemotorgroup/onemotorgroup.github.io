@@ -20,7 +20,6 @@
   <footer>© ONE MOTOR GROUP — All Rights Reserved</footer>
 
   <script>
-    // 从 cars.json 载入所有车辆并生成卡片
     fetch('cars.json')
       .then(res => res.json())
       .then(cars => {
@@ -32,15 +31,16 @@
           div.className = 'car-card';
           div.innerHTML = `
             <img src="assets/img/${car.image}" alt="${car.name}">
-            <h3>${car.name}</h3>
-            <p class="price">${car.price}</p>
+            <div class="info">
+              <h3>${car.name}</h3>
+              <p>${car.price}</p>
+            </div>
           `;
-          div.onclick = () => window.location.href = `car.html?id=${i + 1}`;
-          // 奇偶分配行
+          div.onclick = () => window.location.href = `car.html?id=${i}`;
           (i % 2 === 0 ? row1 : row2).appendChild(div);
         });
 
-        // 复制内容实现无缝循环滚动
+        // 复制内容让动画循环
         row1.innerHTML += row1.innerHTML;
         row2.innerHTML += row2.innerHTML;
       });
