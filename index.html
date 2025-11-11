@@ -31,7 +31,6 @@
       letter-spacing: 1px;
     }
 
-    /* 🟡 外层容器 */
     .car-container {
       position: relative;
       width: 100%;
@@ -39,7 +38,6 @@
       overflow: hidden;
     }
 
-    /* 🟡 每个车格 */
     .car-box {
       position: absolute;
       width: 90%;
@@ -74,16 +72,15 @@
       font-weight: bold;
     }
 
-    /* 🟡 动画 - 左右流动 */
-    .car-box:nth-child(1) {
-      top: 40px;
-      animation: moveRight 10s linear infinite;
-    }
-    .car-box:nth-child(2) {
-      top: 350px;
-      animation: moveLeft 10s linear infinite;
+    footer {
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      padding: 20px 0;
+      font-size: 13px;
+      color: #bfa64a;
     }
 
+    /* 🟡 动画组：循环左右流动 */
     @keyframes moveRight {
       0% { left: -120%; opacity: 0; }
       10% { opacity: 1; }
@@ -100,13 +97,24 @@
       100% { left: -120%; opacity: 0; }
     }
 
-    footer {
-      text-align: center;
-      border-top: 1px solid #d4af37;
-      padding: 20px 0;
-      font-size: 13px;
-      color: #bfa64a;
+    /* 🟡 交替设置动画顺序 */
+    .car-box:nth-child(odd) {
+      animation: moveRight 16s linear infinite;
     }
+    .car-box:nth-child(even) {
+      animation: moveLeft 16s linear infinite;
+    }
+
+    /* 时间错开，让流动更自然 */
+    .car-box:nth-child(1) { animation-delay: 0s; top: 40px; }
+    .car-box:nth-child(2) { animation-delay: 4s; top: 350px; }
+    .car-box:nth-child(3) { animation-delay: 8s; top: 40px; }
+    .car-box:nth-child(4) { animation-delay: 12s; top: 350px; }
+    .car-box:nth-child(5) { animation-delay: 16s; top: 40px; }
+    .car-box:nth-child(6) { animation-delay: 20s; top: 350px; }
+    .car-box:nth-child(7) { animation-delay: 24s; top: 40px; }
+    .car-box:nth-child(8) { animation-delay: 28s; top: 350px; }
+
   </style>
 </head>
 <body>
@@ -117,21 +125,55 @@
 
   <main>
     <div class="car-container">
+
       <div class="car-box">
-        <a href="car.html?id=1">
-          <img src="car_1.jpg" alt="2021 Mercedes-Benz AMG G63 4.0 SUV">
-        </a>
+        <a href="car.html?id=1"><img src="car_1.jpg"></a>
         <div class="car-title">2021 Mercedes-Benz AMG G63 4.0 SUV</div>
         <div class="car-price">RM 883,000</div>
       </div>
 
       <div class="car-box">
-        <a href="car.html?id=2">
-          <img src="car_2.jpg" alt="2022 Mercedes-Benz AMG G63 4.0 BRABUS">
-        </a>
+        <a href="car.html?id=2"><img src="car_2.jpg"></a>
         <div class="car-title">2022 Mercedes-Benz AMG G63 4.0 BRABUS</div>
         <div class="car-price">RM 838,000</div>
       </div>
+
+      <div class="car-box">
+        <a href="car.html?id=3"><img src="car_3.jpg"></a>
+        <div class="car-title">2020 Toyota Alphard 2.5 Executive Lounge</div>
+        <div class="car-price">RM 198,000</div>
+      </div>
+
+      <div class="car-box">
+        <a href="car.html?id=4"><img src="car_4.jpg"></a>
+        <div class="car-title">2022 Lexus RX350 F Sport</div>
+        <div class="car-price">RM 258,000</div>
+      </div>
+
+      <div class="car-box">
+        <a href="car.html?id=5"><img src="car_5.jpg"></a>
+        <div class="car-title">2021 BMW 330i M Sport</div>
+        <div class="car-price">RM 188,000</div>
+      </div>
+
+      <div class="car-box">
+        <a href="car.html?id=6"><img src="car_6.jpg"></a>
+        <div class="car-title">2020 Porsche Macan 2.0 Turbo</div>
+        <div class="car-price">RM 278,000</div>
+      </div>
+
+      <div class="car-box">
+        <a href="car.html?id=7"><img src="car_7.jpg"></a>
+        <div class="car-title">2023 Toyota Vellfire 2.5 ZG</div>
+        <div class="car-price">RM 308,000</div>
+      </div>
+
+      <div class="car-box">
+        <a href="car.html?id=8"><img src="car_8.jpg"></a>
+        <div class="car-title">2021 Tesla Model 3 Long Range</div>
+        <div class="car-price">RM 228,000</div>
+      </div>
+
     </div>
   </main>
 
