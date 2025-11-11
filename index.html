@@ -31,36 +31,34 @@
       letter-spacing: 1px;
     }
 
+    /* 🟡 外层容器 */
     .car-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 0;
-      gap: 35px;
+      position: relative;
+      width: 100%;
+      height: 650px;
+      overflow: hidden;
     }
 
+    /* 🟡 每个车格 */
     .car-box {
+      position: absolute;
       width: 90%;
       max-width: 380px;
+      height: 280px;
+      left: 5%;
       border: 1px solid #d4af37;
-      border-radius: 12px;
+      border-radius: 14px;
       background: #000;
-      overflow: hidden;
-      box-shadow: 0 0 15px #d4af37;
+      box-shadow: 0 0 20px #d4af37;
       text-align: center;
-      position: relative;
-      animation: float 6s ease-in-out infinite alternate;
+      overflow: hidden;
+      transition: all 1s ease-in-out;
     }
 
     .car-box img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.6s;
-    }
-
-    .car-box:hover img {
-      transform: scale(1.05);
     }
 
     .car-title {
@@ -76,18 +74,38 @@
       font-weight: bold;
     }
 
+    /* 🟡 动画 - 左右流动 */
+    .car-box:nth-child(1) {
+      top: 40px;
+      animation: moveRight 10s linear infinite;
+    }
+    .car-box:nth-child(2) {
+      top: 350px;
+      animation: moveLeft 10s linear infinite;
+    }
+
+    @keyframes moveRight {
+      0% { left: -120%; opacity: 0; }
+      10% { opacity: 1; }
+      50% { left: 5%; opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: 120%; opacity: 0; }
+    }
+
+    @keyframes moveLeft {
+      0% { left: 120%; opacity: 0; }
+      10% { opacity: 1; }
+      50% { left: 5%; opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: -120%; opacity: 0; }
+    }
+
     footer {
       text-align: center;
       border-top: 1px solid #d4af37;
       padding: 20px 0;
       font-size: 13px;
       color: #bfa64a;
-    }
-
-    /* 动画 - 上下慢慢流动 */
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(10px); }
     }
   </style>
 </head>
@@ -101,7 +119,7 @@
     <div class="car-container">
       <div class="car-box">
         <a href="car.html?id=1">
-          <img src="car_1.jpg" alt="2021 Mercedes-Benz G63 AMG">
+          <img src="car_1.jpg" alt="2021 Mercedes-Benz AMG G63 4.0 SUV">
         </a>
         <div class="car-title">2021 Mercedes-Benz AMG G63 4.0 SUV</div>
         <div class="car-price">RM 883,000</div>
@@ -109,7 +127,7 @@
 
       <div class="car-box">
         <a href="car.html?id=2">
-          <img src="car_2.jpg" alt="2022 Mercedes-Benz BRABUS G63">
+          <img src="car_2.jpg" alt="2022 Mercedes-Benz AMG G63 4.0 BRABUS">
         </a>
         <div class="car-title">2022 Mercedes-Benz AMG G63 4.0 BRABUS</div>
         <div class="car-price">RM 838,000</div>
