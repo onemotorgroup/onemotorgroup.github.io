@@ -8,10 +8,9 @@
 </head>
 <body>
 
-  <!-- 🟡 固定导航栏 -->
+  <!-- 🟡 顶部导航 -->
   <header class="topnav">
     <div class="nav-container">
-      <!-- 左侧 LOGO + 品牌 -->
       <div class="logo-area">
         <img src="logo.svg" alt="ONE MOTOR GROUP logo">
         <div class="brand">
@@ -20,31 +19,27 @@
         </div>
       </div>
 
-      <!-- 中间菜单 -->
       <nav class="menu">
-        <a href="#" class="active">🏠 Home</a>
-        <a href="#">🚘 Gallery</a>
-        <a href="#">📞 Contact</a>
+        <a href="#" class="active">🏠 HOME</a>
+        <a href="#">🚘 GALLERY</a>
+        <a href="#">📞 CONTACT</a>
       </nav>
 
-      <!-- 右侧语言按钮 + 搜索框 -->
-      <div class="nav-right">
+      <div class="right-side">
+        <input type="text" id="searchInput" placeholder="🔍 Search car name...">
         <div class="lang-switch">
           <button>中文</button>
           <button>EN</button>
           <button>BM</button>
         </div>
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Search car name...">
-        </div>
       </div>
     </div>
   </header>
 
-  <!-- 🟡 主内容区 -->
+  <!-- 🟡 主体内容 -->
   <main>
-    <div id="carGrid" class="car-grid"></div>
-    <div id="pager"></div>
+    <section id="carGrid" class="car-grid"></section>
+    <div id="pager" class="pagination"></div>
   </main>
 
   <!-- 🟡 页脚 -->
