@@ -1,18 +1,22 @@
 [
   {
-    "id": "1",
     "name": "2021 Mercedes-Benz AMG G63 4.0 SUV",
     "price": "RM 883,000",
-    "image": "car_1.jpg",
-    "images": ["car_1.jpg"],
-    "desc": { "zh": "AMG 手工 V8 · 四驱 · 高性能越野旗舰" }
+    "image": "car_1.jpg"
   },
   {
-    "id": "2",
     "name": "2022 Mercedes-Benz AMG G63 4.0 BRABUS",
     "price": "RM 838,000",
-    "image": "car_2.jpg",
-    "images": ["car_2.jpg"],
-    "desc": { "zh": "BRABUS 套件 · 霸气外观 · 稀有配置" }
+    "image": "car_2.jpg"
+  },
+  {
+    "name": "2020 Toyota Alphard 2.5 Executive Lounge",
+    "price": "RM 198,000",
+    "image": "car_3.jpg"
+  },
+  {
+    "name": "2022 Lexus RX350 F Sport",
+    "price": "RM 258,000",
+    "image": "car_4.jpg"
   }
 ]
