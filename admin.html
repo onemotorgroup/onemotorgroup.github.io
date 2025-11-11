@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONE MOTOR GROUP · 后台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><h2>后台管理</h2></header>
+
+  <section class="search">
+    <input id="email" placeholder="管理员邮箱">
+    <input id="pwd" placeholder="密码" type="password">
+    <button id="login">登录</button>
+    <button id="logout" style="display:none">退出</button>
+  </section>
+
+  <main class="grid" id="adminGrid">
+    <div class="card"><div class="p">
+      <h3>说明</h3>
+      <p>此后台页面已就绪。若要云端保存数据，请在 <code>admin.js</code> 中配置 Firebase。</p>
+      <p>前台已可直接使用，车辆数据来自 <code>data/cars.json</code>。</p>
+    </div></div>
+  </main>
+
+  <section class="port">
+    <article class="pb"><div class="txt">
+      <h3>启用步骤（Firebase）</h3>
+      <ol>
+        <li>到 <b>console.firebase.google.com</b> 新建项目</li>
+        <li>开通 Authentication（Email/Password）与 Firestore</li>
+        <li>在“项目设置→应用”，复制网页 SDK 配置</li>
+        <li>把配置粘贴进 <code>admin.js</code> 顶部的 <code>firebaseConfig</code></li>
+        <li>发布到 GitHub Pages，刷新 <code>/admin.html</code> 登录使用</li>
+      </ol>
+    </div></article>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

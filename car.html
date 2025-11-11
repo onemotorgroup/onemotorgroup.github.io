@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="title">车辆详情 · ONE MOTOR GROUP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="detail">
+  <header class="topbar">
+    <a class="back" href="index.html">← 返回</a>
+    <h2 id="carName">车辆详情</h2>
+  </header>
+
+  <section class="gallery" id="gallery"></section>
+  <section class="specs" id="specs"></section>
+
+  <footer class="footer"><p>© ONE MOTOR GROUP</p></footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const carId = params.get('id');
+    fetch('data/cars.json').then(r=>r.json()).then(db=>{
+      const car = (db.cars||[]).find(c=>c.id===carId);
+      const t = document.getElementById('title');
+      const n = document.getElementById('carName');
+      const g = document.getElementById('gallery');
+      const s = document.getElementById('specs');
+      if(!car){ n.textContent="未找到车辆"; return; }
+      t.textContent = `${car.name} · ONE MOTOR GROUP`;
+      n.textContent = car.name;
+      (car.images||[]).slice(0,30).forEach(src=>{
+        const img = document.createElement('img');
+        img.loading="lazy"; img.src=src; img.alt=car.name; g.appendChild(img);
+      });
+      s.innerHTML = `
+        <ul class="kv">
+          <li><b>年份</b><span>${car.year||'-'}</span></li>
+          <li><b>里数</b><span>${car.mileage||'-'}</span></li>
+          <li><b>颜色</b><span>${car.color||'-'}</span></li>
+          <li><b>价格</b><span>${car.price||'-'}</span></li>
+        </ul>
+        <h3>亮点</h3><p>${car.highlights||''}</p>
+        <h3>价值</h3><p>${car.value||''}</p>
+        <h3>故事</h3><p>${car.story||''}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
