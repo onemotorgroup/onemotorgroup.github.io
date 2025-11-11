@@ -1,0 +1,62 @@
+[
+  {
+    "id": "alphard-2021",
+    "name": "Toyota Alphard 2.5 Z",
+    "year": 2021,
+    "origin": "Japan Import",
+    "price": 385000,
+    "mileage": 15000,
+    "cover": "images/alphard1.jpg",
+    "images": [
+      "images/alphard1.jpg",
+      "images/alphard2.jpg",
+      "images/alphard3.jpg"
+    ],
+    "specs": [
+      "7-Seater MPV",
+      "Toyota Safety Sense",
+      "Power Door",
+      "Leather Seats"
+    ]
+  },
+  {
+    "id": "rx350-2020",
+    "name": "Lexus RX 350",
+    "year": 2020,
+    "origin": "Japan Import",
+    "price": 310000,
+    "mileage": 20000,
+    "cover": "images/rx1.jpg",
+    "images": [
+      "images/rx1.jpg",
+      "images/rx2.jpg",
+      "images/rx3.jpg"
+    ],
+    "specs": [
+      "Luxury SUV",
+      "Adaptive Cruise",
+      "Premium Audio",
+      "Panoramic Roof"
+    ]
+  },
+  {
+    "id": "jimny-2022",
+    "name": "Suzuki Jimny 1.5 (A)",
+    "year": 2022,
+    "origin": "Japan Import",
+    "price": 39900,
+    "mileage": 12000,
+    "cover": "images/jimny1.jpg",
+    "images": [
+      "images/jimny1.jpg",
+      "images/jimny2.jpg",
+      "images/jimny3.jpg"
+    ],
+    "specs": [
+      "4x4",
+      "Compact Off-roader",
+      "Fuel Saving",
+      "Practical"
+    ]
+  }
+]
