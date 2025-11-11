@@ -1,52 +1,12 @@
 [
   {
-    "id": "alphard2023",
-    "name": "2023 Toyota Alphard 2.5 (A) Z",
-    "price": "RM 100,000",
-    "image": "/assets/img/car_1.jpg",
-    "link": "/car.html",
-    "country": "Japan Import",
-    "mileage": "8,000 km",
-    "highlight": "Executive Luxury · Power Doors · JBL Sound · Full LED"
+    "name": "2021 Mercedes-Benz AMG G63 4.0 SUV",
+    "price": "RM 883,000",
+    "image": "car_1.jpg"
   },
   {
-    "id": "vellfire2022",
-    "name": "2022 Toyota Vellfire 2.5 (A) ZG",
-    "price": "RM 96,000",
-    "image": "/assets/img/car_2.jpg",
-    "link": "/car.html",
-    "country": "Japan Import",
-    "mileage": "12,000 km",
-    "highlight": "Premium Executive · Dual Sunroof · Captain Seats"
-  },
-  {
-    "id": "lexusrx2021",
-    "name": "2021 Lexus RX300 2.0 (A) F Sport",
-    "price": "RM 82,000",
-    "image": "/assets/img/car_3.jpg",
-    "link": "/car.html",
-    "country": "Japan Import",
-    "mileage": "18,000 km",
-    "highlight": "F Sport Package · Panoramic Roof · Low Mileage"
-  },
-  {
-    "id": "glc2002022",
-    "name": "2022 Mercedes-Benz GLC200 2.0 (A)",
-    "price": "RM 61,000",
-    "image": "/assets/img/car_4.jpg",
-    "link": "/car.html",
-    "country": "UK Import",
-    "mileage": "41,688 km",
-    "highlight": "Luxury SUV · LED Headlights · Leather Interior"
-  },
-  {
-    "id": "macan2020",
-    "name": "2020 Porsche Macan 2.0 (A) Turbo",
-    "price": "RM 75,000",
-    "image": "/assets/img/car_5.jpg",
-    "link": "/car.html",
-    "country": "UK Import",
-    "mileage": "22,000 km",
-    "highlight": "Sport SUV · Turbocharged · Performance Mode"
+    "name": "2022 Mercedes-Benz AMG G63 4.0 BRABUS",
+    "price": "RM 838,000",
+    "image": "car_2.jpg"
   }
 ]
